@@ -36,7 +36,7 @@
 
 ```
 PowerVoltsApp/
-├── PowerVolts.Server/                       # Backend .NET Core 8 Web API (C#)
+├── backend/                                 # Backend .NET Core 8 Web API (C#)
 │   ├── Controllers/                         # Endpoints REST API
 │   │   ├── MeterReadingsController.cs       # Cálculo y guardado de lecturas
 │   │   ├── SavingPlansController.cs         # Gestión de planes y simulaciones
@@ -52,7 +52,7 @@ PowerVoltsApp/
 │   │   └── EnergySavingService.cs           # Motor de cálculo y optimización de ahorro
 │   └── Program.cs                           # Inyección de dependencias y CORS
 │
-└── PowerVolts.Client/                       # Frontend React 18 + Ionic Framework
+└── frontend/                                # Frontend React 18 + Ionic Framework
     ├── src/
     │   ├── components/                      # Componentes modulares M3
     │   ├── services/                        # Cliente API REST
@@ -82,7 +82,7 @@ cd PowerVolts
 
 ### 2. Ejecutar el Backend (.NET API)
 ```bash
-cd PowerVolts.Server
+cd backend
 dotnet run --urls "http://localhost:5000"
 ```
 *La base de datos SQLite `power_volts.db` se creará e inicializará automáticamente en el primer arranque.*  
@@ -91,7 +91,7 @@ Documentación interactiva disponible en: `http://localhost:5000/swagger`
 ### 3. Ejecutar el Frontend (React + Ionic)
 En una nueva terminal:
 ```bash
-cd PowerVolts.Client
+cd frontend
 npm install
 npm run dev
 ```
